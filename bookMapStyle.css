@@ -1,0 +1,256 @@
+body {
+  background-image: url(bg_withshadow.jpg);
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  /* background-size: cover;
+  background-attachment: fixed; */
+}
+
+
+/* 香爐 Css Effect */
+.xiangLu {
+  width: 250px;
+  margin-left: 290px;
+  margin-top: 110px;
+  position: fixed;
+  filter: drop-shadow(0 0 15px #FF9933);
+  animation: xiangLuAnimate 5s linear 4s infinite alternate;
+}
+
+@keyframes xiangLuAnimate
+{
+  0%
+  {
+    filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;
+  }
+  70%
+  {
+    filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;
+  }
+  100%
+  {
+    filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
+    box-shadow: none;
+  }
+}
+
+
+/* 花瓶 Css Effect */
+.huaPing {
+  width: 230px;
+  margin-left: 355px;
+  margin-top: 390px;
+  position: fixed;
+  filter: drop-shadow(0 0 15px #FF9933);
+  animation: huaPingAnimate 5s linear 4s infinite alternate;
+  animation-delay: 7s;
+}
+
+@keyframes huaPingAnimate
+{
+  0%
+  {
+    filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;
+  }
+  70%
+  {
+    filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;
+  }
+  100%
+  {
+    filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
+    box-shadow: none;
+  }
+}
+
+
+/* 茉莉香片 Css Effect */
+.茉莉香片 {
+  width: 560px;
+  margin-left: 950px;
+  margin-top: 130px;
+  position: fixed;
+  filter: drop-shadow(0 0 15px #FF9933);
+  animation: MoLiAnimate 5s linear 4s infinite alternate;
+  animation-delay: 10s;
+}
+
+@keyframes MoLiAnimate
+{
+  0%
+  {
+    filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;
+  }
+  70%
+  {
+    filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;
+  }
+  100%
+  {
+    filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
+    box-shadow: none;
+  }
+}
+
+
+/* 心經 Css Effect */
+.心經 {
+  width: 230px;
+  margin-left: 510px;
+  margin-top: -8px;
+  position: fixed;
+  filter: drop-shadow(0 0 15px #FF9933);
+  animation: XinJingAnimate 5s linear 4s infinite alternate;
+  animation-delay: 18s;
+}
+
+@keyframes XinJingAnimate
+{
+  0%
+  {
+    filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;
+  }
+  70%
+  {
+    filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;
+  }
+  100%
+  {
+    filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
+    box-shadow: none;
+  }
+}
+
+
+/* 封鎖 Css Effect */
+.封鎖 {
+  width: 480px;
+  margin-left: 510px;
+  margin-top: 380px;
+  position: fixed;
+  filter: drop-shadow(0 0 15px #FF9933);
+  animation: FengSuoAnimate 5s linear 4s infinite alternate;
+  animation-delay: 10s;
+}
+
+@keyframes FengSuoAnimate
+{
+  0%
+  {
+    filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;
+  }
+  70%
+  {
+    filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;
+  }
+  100%
+  {
+    filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
+    box-shadow: none;
+  }
+}
+
+
+/* 封鎖 Css Effect */
+.大鐘二胡 {
+  width: 430px;
+  margin-left: 0px;
+  margin-top: 110px;
+  position: fixed;
+  filter: drop-shadow(0 0 15px #FF9933);
+  animation: DaZhongAnimate 5s linear 4s infinite alternate;
+  animation-delay: 21s;
+}
+
+@keyframes DaZhongAnimate
+{
+  0%
+  {
+    filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;
+  }
+  70%
+  {
+    filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;
+  }
+  100%
+  {
+    filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
+    box-shadow: none;
+  }
+}
+
+
+/* 琉璃瓦 Css Effect */
+.琉璃瓦 {
+  width: 390px;
+  margin-left: 1050px;
+  margin-top: 0px;
+  position: fixed;
+  filter: drop-shadow(0 0 15px #FF9933);
+  animation: LiuLiWaAnimate 5s linear 4s infinite alternate;
+  animation-delay: 17s;
+}
+
+@keyframes LiuLiWaAnimate
+{
+  0%
+  {
+    filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;
+  }
+  70%
+  {
+    filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;
+  }
+  100%
+  {
+    filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
+    box-shadow: none;
+  }
+}
+
+
+/* 金鎖記 Css Effect */
+.金鎖記 {
+  width:150px;
+  margin-left: 740px;
+  margin-top: 190px;
+  position: fixed;
+  filter: drop-shadow(0 0 15px #FF9933);
+  animation: JinSuoJiAnimate 5s linear 4s infinite alternate;
+  animation-delay: 25s;
+}
+
+@keyframes JinSuoJiAnimate
+{
+  0%
+  {
+    filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;
+  }
+  70%
+  {
+    filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;
+  }
+  100%
+  {
+    filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
+    box-shadow: none;
+  }
+}
