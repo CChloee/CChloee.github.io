@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" link>
+    <title> Finger Muse - Painter </title>
+  </head>
+  <body>
+      <canvas id='canvas'>Finger Muse Drawing Canvas</canvas>
+      <div id='toolbar'>
+        <!-- Clear Canvas -->
+        <div><button type="button" id='clearCanvas' href='javascript:void(0)' onClick="clearCanvas()">Clear</button></div>
+        <!-- Brush Slider -->
+        <div class='slidecontainer'>
+          <input type='range' data-slider-id='brushSlider' min='1' max='30' value='3' class='slider' id='brushSize'/>
+        </div>
+        <!-- Erase -->
+        <input type='button' id='eraseTool' value='erase' class='erase' onClick='erase()'/>
+        <!-- Color Swatches -->
+        <div id= colors>
+          <nav>
+            <a href="#" style="background-color: #ff4141"></a>
+            <a href="#" style="background-color: #fef336"></a>
+            <a href="#" style="background-color: #2727e6"></a>
+            <a href="#" style="background-color: #13e26f"></a>
+            <a href="#" style="background-color: #ffffff"></a>
+          </nav>
+        </div>
+      </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="painter.js"></script>
+  </body>
+</html>
