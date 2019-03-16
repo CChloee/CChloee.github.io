@@ -1,0 +1,145 @@
+#toolbar{
+  width: 100%;
+  height: 45px;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  background-color: #3B6C6C;
+  color: #CBA44B;
+}
+
+body {
+  background-color: #111118;
+  margin:0;
+}
+
+
+/**********************/
+/* Color Swatches */
+nav {
+  position: fixed;
+  bottom: 10px;
+  left: 30px;
+  z-index: 1;
+}
+
+nav *{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+#canvas{
+  display: block;
+}
+
+
+/**********************/
+/* Clear Button */
+button {
+  position: fixed;
+  /* margin-left: 20px;
+  margin-top: 10px; */
+  bottom: 30px;
+  left: 1150px;
+  padding: 10px 25px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: '#ffff';
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 5px #999;
+}
+
+button:hover{
+  background-color: #3e8e41;
+}
+
+button:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+/**********************/
+/* Brush Size Slider */
+/* The slider itself */
+.slider {
+  position: fixed;
+  bottom: 30px;
+  left: 370px;
+}
+
+.slider {
+  -webkit-appearance: none; /* Override default CSS style */
+  appearnce: none;
+  display: inline-block;
+  width: 150px; /* Full-width */
+  height: 15px; /* Specified height */
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency for mouse over effect */
+  -webkit-transition: -.2s; /* 0.2s transition on hover effect */
+  transition: opacity .2s;
+}
+
+/* Mouse over effect */
+.slider:hover{
+  opacity: 1;
+}
+
+/* Slider handle (use -webkit- 0r -moz- to override browser default look)*/
+.slider::-webkit-slider-thumb {
+  -webkit-appearnce: none; /* Override default look */
+  appearnce: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* slider handle height */
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+
+/**********************/
+/* Erase Button */
+.erase {
+  position: fixed;
+  left: 550px;
+  bottom: 25px;
+}
+
+.erase{
+  background-color: #6666FF;
+  border: none;
+  box-shadow: 0 5px #999;
+  display: inline-block;
+  width: 70px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.erase:hover{
+  background-color: #808080;
+}
+
+.erase:active{
+  background-color: #6633CC;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
