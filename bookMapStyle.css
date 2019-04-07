@@ -1,42 +1,59 @@
-body {
-  background-image: url(bg_withshadow.jpg);
-  width: 100%;
+body, html {
   height: 100%;
-  padding: 0;
-  margin: 0;
   /* background-size: cover;
   background-attachment: fixed; */
 }
 
+.bgimg {
+  background-image: url(bg_transparent.jpg);
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
 
 /* 香爐 Css Effect */
 .xiangLu {
   width: 250px;
+  height: auto;
   margin-left: 290px;
   margin-top: 110px;
   position: fixed;
   filter: drop-shadow(0 0 15px #FF9933);
-  animation: xiangLuAnimate 5s linear 4s infinite alternate;
+  animation: xiangLuAnimate 5s linear infinite alternate,
+              xiangLuShake  3s linear 5s 2 alternate;
 }
 
 @keyframes xiangLuAnimate
 {
   0%
-  {
-    filter: drop-shadow(0 0 15px #000000);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;}
   70%
-  {
-    filter: drop-shadow(0 0 15px #000000);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;}
   100%
-  {
-    filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
+    box-shadow: none;}
 }
+
+@keyframes xiangLuShake {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  20% { transform: translate(0px, 0px) rotate(0deg); }
+  50% { transform: translate(2px, 3px) rotate(-2deg); }
+  70% { transform: translate(-3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, 1px) rotate(0deg); }
+  100% { transform: translate(2px, -2px) rotate(2deg); }
+}
+  /* 0% { transform: rotate(0deg); }
+  40% { transform: rotate(5deg); }
+  45% { transform: rotate(10deg); }
+  40% { transform: rotate(5deg); }
+  50% { transform: rotate(360deg); }
+  100% { transform: rotate(360deg); }
+} */
+
 
 
 /* 花瓶 Css Effect */
@@ -45,29 +62,36 @@ body {
   margin-left: 355px;
   margin-top: 390px;
   position: fixed;
-  filter: drop-shadow(0 0 15px #FF9933);
-  animation: huaPingAnimate 5s linear 4s infinite alternate;
-  animation-delay: 7s;
+  filter: drop-shadow(0 0 15px #000000);
+  animation: huaPingAnimate 5s linear 5s infinite alternate,
+             huaPingShake 3s linear 15s infinite alternate;
 }
 
 @keyframes huaPingAnimate
 {
   0%
-  {
-    filter: drop-shadow(0 0 15px #000000);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none; }
+  20%
+  {filter: drop-shadow(0 0 15px #FF9933);
+    box-shadow: none;}
   70%
-  {
-    filter: drop-shadow(0 0 15px #000000);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;}
   100%
-  {
-    filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
+    box-shadow: none;}
 }
+
+@keyframes huaPingShake {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  20% { transform: translate(0px, 0px) rotate(0deg); }
+  50% { transform: translate(2px, 3px) rotate(-2deg); }
+  70% { transform: translate(-3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, 1px) rotate(0deg); }
+  100% { transform: translate(2px, -2px) rotate(2deg); }
+}
+
 
 
 /* 茉莉香片 Css Effect */
@@ -78,7 +102,6 @@ body {
   position: fixed;
   filter: drop-shadow(0 0 15px #FF9933);
   animation: MoLiAnimate 5s linear 4s infinite alternate;
-  animation-delay: 10s;
 }
 
 @keyframes MoLiAnimate
