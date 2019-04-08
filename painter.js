@@ -65,3 +65,15 @@ function erase(){
   context.fillStyle = "rgba(255, 0, 0, 0)";
   context.lineWidth = 5;
 }
+
+
+//Submit Drawing
+function submitDrawing (){
+  window.location.href = 'CommentGallery.html';
+}
+
+
+//Back to previous page
+function backTo_id() {
+  window.location.href = 'index.html';
+}

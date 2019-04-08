@@ -5,38 +5,61 @@ body, html {
 .bgimg {
   background-image: url(地圖頁面文本-02.jpg);
   min-height: 100%;
+  max-width: 100%;
   padding: 0;
   margin: 0;
   background-size: cover;
   background-position: center;
 }
 
+/* ----------------------------------------------------------------*/
+/* ----------------------回到上一頁 button----------------------*/
+.backTo {
+  position: absolute;
+  top: 9%;
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
 
-/* 做筆記 button*/
-button {
+.backTo {
+  background-color: #f1f1f1;
+  color: black;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  font-size: 40px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+/* ----------------------------------------------------------------*/
+/* ----------------------前往做筆記 button----------------------*/
+a {
   position: absolute;
   top: 90%;
   left: 85%;
   transform: translate(-50%, -50%);
 }
 
-button {
+a {
   background: none;
   color: #ccc;
   width: 240px;
   height: 70px;
   border: 2px solid #338033;
-  font-size: 18px;
+  font-size: 20px;
   border-radius: 4px;
   transition: .6s;
   overflow: hidden;
 }
 
-button:focus{
+a:focus{
   outline: none;
 }
 
-button:before{
+a:before{
   content: '';
   display: block;
   position: absolute;
@@ -50,7 +73,7 @@ button:before{
   transform: translateX(-130pc) skewX(-15deg);
 }
 
-button:after{
+a:after{
   content: '';
   display: block;
   position: absolute;
@@ -64,18 +87,18 @@ button:after{
   transform: translate(-100px) scale(-15deg);
 }
 
-button:hover{
+a:hover{
   background: #338033;
   cursor: pointer;
 }
 
-button:hover:before{
+a:hover:before{
   transform: translateX(300px) skewX(-15deg);
   opacity: .6;
   transition: .7s;
 }
 
-button:hover:after{
+a:hover:after{
   transform: translateX(300px) skewX(-15deg);
   opacity: .6;
   transition: .7s;

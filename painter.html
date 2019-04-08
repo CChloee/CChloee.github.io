@@ -4,17 +4,24 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" link>
+    <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
     <title> Finger Muse - Painter </title>
   </head>
   <body>
+    <div>
       <canvas id='canvas'>Finger Muse Drawing Canvas</canvas>
+
+      <!-- Back to previous page -->
+      <div><button class='backTo' type="button" id='backTo_id' href='javascript:void(0)' onClick="backTo_id()"></button></div>
+
+      <!-- Submit Drawing -->
+      <div><button class='submitDraw' type="button" id='submitDrawing' href='javascript:void(0)' onClick="submitDrawing()">Submit</button></div>
+
       <div id='toolbar'>
         <!-- Clear Canvas -->
-        <div><button type="button" id='clearCanvas' href='javascript:void(0)' onClick="clearCanvas()">Clear</button></div>
+        <div><button class='clearCanvas' type="button" id='clearCanvas' href='javascript:void(0)' onClick="clearCanvas()">Clear</button></div>
         <!-- Brush Slider -->
-        <div class='slidecontainer'>
-          <input type='range' data-slider-id='brushSlider' min='1' max='30' value='3' class='slider' id='brushSize'/>
-        </div>
+        <div class='slidecontainer'><input type='range' data-slider-id='brushSlider' min='1' max='30' value='3' class='slider' id='brushSize'/></div>
         <!-- Erase -->
         <input type='button' id='eraseTool' value='erase' class='erase' onClick='erase()'/>
         <!-- Color Swatches -->
@@ -27,8 +34,11 @@
             <a href="#" style="background-color: #ffffff"></a>
           </nav>
         </div>
+
       </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="painter.js"></script>
+
+    </div>
   </body>
 </html>

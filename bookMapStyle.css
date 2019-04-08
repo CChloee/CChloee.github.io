@@ -1,5 +1,6 @@
 body, html {
   height: 100%;
+  width: 100%;
   /* background-size: cover;
   background-attachment: fixed; */
 }
@@ -7,26 +8,29 @@ body, html {
 .bgimg {
   background-image: url(bg_transparent.jpg);
   min-height: 100%;
-  background-position: center;
+  background-position: center ;
   background-size: cover;
   margin: 0;
   padding: 0;
 }
 
-/* 香爐 Css Effect */
+
+/* ----------------------------------------------------------------*/
+/* -----------------------香爐 Css Effect ----------------------- */
 .xiangLu {
-  width: 250px;
+  width: 300px;
   height: auto;
-  margin-left: 290px;
-  margin-top: 110px;
+  /* margin-left: 290px;
+  margin-top: 110px; */
+  top: 180px;
+  left: 390px;
   position: fixed;
   filter: drop-shadow(0 0 15px #FF9933);
   animation: xiangLuAnimate 5s linear infinite alternate,
               xiangLuShake  3s linear 5s 2 alternate;
 }
 
-@keyframes xiangLuAnimate
-{
+@keyframes xiangLuAnimate {
   0%
   {filter: drop-shadow(0 0 15px #000000);
     box-shadow: none;}
@@ -46,29 +50,27 @@ body, html {
   80% { transform: translate(-1px, 1px) rotate(0deg); }
   100% { transform: translate(2px, -2px) rotate(2deg); }
 }
-  /* 0% { transform: rotate(0deg); }
-  40% { transform: rotate(5deg); }
-  45% { transform: rotate(10deg); }
-  40% { transform: rotate(5deg); }
-  50% { transform: rotate(360deg); }
-  100% { transform: rotate(360deg); }
-} */
 
 
-
-/* 花瓶 Css Effect */
+/* ----------------------------------------------------------------*/
+/* -----------------------花瓶 Css Effect------------------------- */
 .huaPing {
-  width: 230px;
-  margin-left: 355px;
-  margin-top: 390px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  /* margin-left: 355px;
+  margin-top: 390px; */
+  margin: 0px;
+  padding: 0px;
+  bottom: 250px;
+  left: 450px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
   animation: huaPingAnimate 5s linear 5s infinite alternate,
-             huaPingShake 3s linear 15s infinite alternate;
+             huaPingShake 3s linear 15s 2 alternate;
 }
 
-@keyframes huaPingAnimate
-{
+@keyframes huaPingAnimate {
   0%
   {filter: drop-shadow(0 0 15px #000000);
     box-shadow: none; }
@@ -93,187 +95,260 @@ body, html {
 }
 
 
-
-/* 茉莉香片 Css Effect */
+/* ----------------------------------------------------------------*/
+/* ----------------------- 茉莉香片 Css Effect --------------------- */
 .茉莉香片 {
-  width: 560px;
-  margin-left: 950px;
-  margin-top: 130px;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  /* margin-left: 9px;
+  margin-top: 130px; */
+  margin: 0px;
+  padding: 0px;
+  top: 250px;
+  right: 0px;
   position: fixed;
-  filter: drop-shadow(0 0 15px #FF9933);
-  animation: MoLiAnimate 5s linear 4s infinite alternate;
+  filter: drop-shadow(0 0 15px #000000);
+  animation: MoLiAnimate 5s linear 8s infinite alternate,
+            MoLiShake 3s linear 10s 2 alternate;
 }
 
-@keyframes MoLiAnimate
-{
+@keyframes MoLiAnimate {
   0%
-  {
-    filter: drop-shadow(0 0 15px #000000);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;}
+  20%
+  {filter: drop-shadow(0 0 15px #FF9933);
+    box-shadow: none;}
   70%
-  {
-    filter: drop-shadow(0 0 15px #000000);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;}
   100%
-  {
-    filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
+    box-shadow: none;}
+}
+
+@keyframes MoLiShake {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  20% { transform: translate(0px, 0px) rotate(0deg); }
+  50% { transform: translate(2px, 3px) rotate(-2deg); }
+  70% { transform: translate(-3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, 1px) rotate(0deg); }
+  100% { transform: translate(2px, -2px) rotate(2deg); }
 }
 
 
-/* 心經 Css Effect */
+
+/* ----------------------------------------------------------------*/
+/* ----------------------- 心經 Css Effect ----------------------- */
 .心經 {
-  width: 230px;
-  margin-left: 510px;
-  margin-top: -8px;
+  width: 100%;
+  height: auto;
+  max-width: 330px;
+  /* margin-left: 510px;
+  margin-top: -8px; */
+  margin: 0px;
+  padding: 0px;
+  top: 0px;
+  left: 630px;
   position: fixed;
-  filter: drop-shadow(0 0 15px #FF9933);
-  animation: XinJingAnimate 5s linear 4s infinite alternate;
-  animation-delay: 18s;
+  filter: drop-shadow(0 0 15px #000000);
+  animation: XinJingAnimate 5s linear 20s infinite alternate,
+            XinJingShake 3s linear 20s 2 alternate;
+
 }
 
-@keyframes XinJingAnimate
-{
+@keyframes XinJingAnimate {
   0%
-  {
-    filter: drop-shadow(0 0 15px #000000);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none; }
+  20%
+  {filter: drop-shadow(0 0 15px #FF9933);
+    box-shadow: none;}
   70%
-  {
-    filter: drop-shadow(0 0 15px #000000);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;}
   100%
-  {
-    filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
+    box-shadow: none;}
+}
+
+@keyframes XinJingShake {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  20% { transform: translate(0px, 0px) rotate(0deg); }
+  50% { transform: translate(2px, 3px) rotate(-2deg); }
+  70% { transform: translate(-3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, 1px) rotate(0deg); }
+  100% { transform: translate(2px, -2px) rotate(2deg); }
 }
 
 
-/* 封鎖 Css Effect */
+
+/* ----------------------------------------------------------------*/
+/* ----------------------- 封鎖 Css Effect ----------------------- */
 .封鎖 {
-  width: 480px;
-  margin-left: 510px;
-  margin-top: 380px;
+  width: 100%;
+  height: auto;
+  max-width: 580px;
+  /* margin-left: 510px;
+  margin-top: 380px; */
+  margin: 0px;
+  padding: 0px;
+  bottom: 30px;
+  left: 700px;
   position: fixed;
-  filter: drop-shadow(0 0 15px #FF9933);
-  animation: FengSuoAnimate 5s linear 4s infinite alternate;
-  animation-delay: 10s;
+  filter: drop-shadow(0 0 15px #000000);
+  animation: FengSuoAnimate 5s linear 10s infinite alternate,
+            FengSuoShake 3s linear 25s 2 alternate;
+
 }
 
-@keyframes FengSuoAnimate
-{
+@keyframes FengSuoAnimate {
   0%
-  {
-    filter: drop-shadow(0 0 15px #000000);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;}
+  20%
+  {filter: drop-shadow(0 0 15px #FF9933);
+    box-shadow: none;}
   70%
-  {
-    filter: drop-shadow(0 0 15px #000000);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;}
   100%
-  {
-    filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
+    box-shadow: none;}
+}
+
+@keyframes FengSuoShake {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  20% { transform: translate(0px, 0px) rotate(0deg); }
+  50% { transform: translate(2px, 3px) rotate(-2deg); }
+  70% { transform: translate(-3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, 1px) rotate(0deg); }
+  100% { transform: translate(2px, -2px) rotate(2deg); }
 }
 
 
-/* 封鎖 Css Effect */
+
+/* ----------------------------------------------------------------*/
+/* ----------------------- 大鐘二胡 Css Effect -------------------- */
 .大鐘二胡 {
-  width: 430px;
-  margin-left: 0px;
-  margin-top: 110px;
+  width: 550px;
+  /* margin-left: 0px;
+  margin-top: 110px; */
+  margin: 0px;
+  padding: 0px;
+  top: 150px;
+  left: 2px;
   position: fixed;
-  filter: drop-shadow(0 0 15px #FF9933);
-  animation: DaZhongAnimate 5s linear 4s infinite alternate;
-  animation-delay: 21s;
+  filter: drop-shadow(0 0 15px #000000);
+  animation: DaZhongAnimate 5s linear 12s infinite alternate,
+            DaZhongShake 3s linear 30s 2 alternate;
 }
 
-@keyframes DaZhongAnimate
-{
+@keyframes DaZhongAnimate{
   0%
-  {
-    filter: drop-shadow(0 0 15px #000000);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;}
+  20%
+  {filter: drop-shadow(0 0 15px #FF9933);
+    box-shadow: none;}
   70%
-  {
-    filter: drop-shadow(0 0 15px #000000);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;}
   100%
-  {
-    filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
+    box-shadow: none;}
+}
+
+@keyframes DaZhongShake {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  20% { transform: translate(0px, 0px) rotate(0deg); }
+  50% { transform: translate(2px, 3px) rotate(-2deg); }
+  70% { transform: translate(-3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, 1px) rotate(0deg); }
+  100% { transform: translate(2px, -2px) rotate(2deg); }
 }
 
 
-/* 琉璃瓦 Css Effect */
+
+/* ----------------------------------------------------------------*/
+/* ----------------------- 琉璃瓦 Css Effect -------------------- */
 .琉璃瓦 {
-  width: 390px;
-  margin-left: 1050px;
-  margin-top: 0px;
+  width: 620px;
+  /* margin-left: 1050px;
+  margin-top: 0px; */
+  margin: 0px;
+  padding: 0px;
+  top: 0px;
+  right:0px;
   position: fixed;
-  filter: drop-shadow(0 0 15px #FF9933);
-  animation: LiuLiWaAnimate 5s linear 4s infinite alternate;
-  animation-delay: 17s;
+  filter: drop-shadow(0 0 15px #000000);
+  animation: LiuLiWaAnimate 5s linear 15s infinite alternate,
+            LiuLiWaShake 3s linear 13s 2 alternate;
 }
 
-@keyframes LiuLiWaAnimate
-{
+@keyframes LiuLiWaAnimate {
   0%
-  {
-    filter: drop-shadow(0 0 15px #000000);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;}
+  20%
+  {filter: drop-shadow(0 0 15px #FF9933);
+    box-shadow: none;}
   70%
-  {
-    filter: drop-shadow(0 0 15px #000000);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;}
   100%
-  {
-    filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
+    box-shadow: none;}
+}
+
+@keyframes LiuLiWaShake {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  20% { transform: translate(0px, 0px) rotate(0deg); }
+  50% { transform: translate(2px, 3px) rotate(-2deg); }
+  70% { transform: translate(-3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, 1px) rotate(0deg); }
+  100% { transform: translate(2px, -2px) rotate(2deg); }
 }
 
 
-/* 金鎖記 Css Effect */
+
+/* ----------------------------------------------------------------*/
+/* ----------------------- 金鎖記 Css Effect -------------------- */
 .金鎖記 {
-  width:150px;
-  margin-left: 740px;
-  margin-top: 190px;
+  width:180px;
+  /* margin-left: 740px;
+  margin-top: 190px; */
+  margin: 0px;
+  padding: 0px;
+  top: 300px;
+  right: 770px;
   position: fixed;
-  filter: drop-shadow(0 0 15px #FF9933);
-  animation: JinSuoJiAnimate 5s linear 4s infinite alternate;
-  animation-delay: 25s;
+  filter: drop-shadow(0 0 15px #000000);
+  animation: JinSuoJiAnimate 5s linear 5s infinite alternate,
+            JinSuoJiShake 3s linear 22s 2 alternate;
 }
 
-@keyframes JinSuoJiAnimate
-{
+@keyframes JinSuoJiAnimate {
   0%
-  {
-    filter: drop-shadow(0 0 15px #000000);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none;}
+  20%
+  {filter: drop-shadow(0 0 15px #FF9933);
+    box-shadow: none;}
   70%
-  {
-    filter: drop-shadow(0 0 15px #000000);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 15px #000000);
+    box-shadow: none; }
   100%
-  {
-    filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
-    box-shadow: none;
-  }
+  {filter: drop-shadow(0 0 5px #FFFF33, 0 0 20px #FF9933);
+    box-shadow: none;}
+}
+
+@keyframes JinSuoJiShake {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  20% { transform: translate(0px, 0px) rotate(0deg); }
+  50% { transform: translate(2px, 3px) rotate(-2deg); }
+  70% { transform: translate(-3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, 1px) rotate(0deg); }
+  100% { transform: translate(2px, -2px) rotate(2deg); }
 }
