@@ -65,7 +65,7 @@ body, html {
   margin-top: 390px; */
   margin: 0px;
   padding: 0px;
-  bottom: 150px;
+  bottom: 130px;
   left: 320px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
@@ -108,7 +108,7 @@ body, html {
   margin-top: 130px; */
   margin: 0px;
   padding: 0px;
-  bottom: -10px;
+  bottom: -50px;
   right: -100px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
@@ -198,7 +198,7 @@ body, html {
   margin: 0px;
   padding: 0px;
   bottom: 10px;
-  left: 450px;
+  left: 470px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
   animation: FengSuoAnimate 5s linear 10s infinite alternate,
@@ -240,7 +240,7 @@ body, html {
   margin-top: 110px; */
   margin: 0px;
   padding: 0px;
-  top: 80px;
+  top: 50px;
   left: 2px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
