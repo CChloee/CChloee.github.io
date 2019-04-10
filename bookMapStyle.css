@@ -18,12 +18,15 @@ body, html {
 /* ----------------------------------------------------------------*/
 /* -----------------------香爐 Css Effect ----------------------- */
 .xiangLu {
-  width: 300px;
+  width: 100%;
+  max-width: 230px;
   height: auto;
   /* margin-left: 290px;
   margin-top: 110px; */
-  top: 180px;
-  left: 390px;
+  top: 80px;
+  left: 280px;
+  margin: 0px;
+  padding: 0px;
   position: fixed;
   filter: drop-shadow(0 0 15px #FF9933);
   animation: xiangLuAnimate 5s linear infinite alternate,
@@ -56,14 +59,14 @@ body, html {
 /* -----------------------花瓶 Css Effect------------------------- */
 .huaPing {
   width: 100%;
-  max-width: 300px;
+  max-width: 200px;
   height: auto;
   /* margin-left: 355px;
   margin-top: 390px; */
   margin: 0px;
   padding: 0px;
-  bottom: 250px;
-  left: 450px;
+  bottom: 150px;
+  left: 320px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
   animation: huaPingAnimate 5s linear 5s infinite alternate,
@@ -99,14 +102,14 @@ body, html {
 /* ----------------------- 茉莉香片 Css Effect --------------------- */
 .茉莉香片 {
   width: 100%;
-  max-width: 700px;
+  max-width: 550px;
   height: auto;
   /* margin-left: 9px;
   margin-top: 130px; */
   margin: 0px;
   padding: 0px;
-  top: 250px;
-  right: 0px;
+  bottom: -10px;
+  right: -100px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
   animation: MoLiAnimate 5s linear 8s infinite alternate,
@@ -144,13 +147,13 @@ body, html {
 .心經 {
   width: 100%;
   height: auto;
-  max-width: 330px;
+  max-width: 240px;
   /* margin-left: 510px;
   margin-top: -8px; */
   margin: 0px;
   padding: 0px;
   top: 0px;
-  left: 630px;
+  left: 470px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
   animation: XinJingAnimate 5s linear 20s infinite alternate,
@@ -189,13 +192,13 @@ body, html {
 .封鎖 {
   width: 100%;
   height: auto;
-  max-width: 580px;
+  max-width: 400px;
   /* margin-left: 510px;
   margin-top: 380px; */
   margin: 0px;
   padding: 0px;
-  bottom: 30px;
-  left: 700px;
+  bottom: 10px;
+  left: 450px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
   animation: FengSuoAnimate 5s linear 10s infinite alternate,
@@ -232,12 +235,12 @@ body, html {
 /* ----------------------------------------------------------------*/
 /* ----------------------- 大鐘二胡 Css Effect -------------------- */
 .大鐘二胡 {
-  width: 550px;
+  max-width: 400px;
   /* margin-left: 0px;
   margin-top: 110px; */
   margin: 0px;
   padding: 0px;
-  top: 150px;
+  top: 80px;
   left: 2px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
@@ -274,7 +277,7 @@ body, html {
 /* ----------------------------------------------------------------*/
 /* ----------------------- 琉璃瓦 Css Effect -------------------- */
 .琉璃瓦 {
-  width: 620px;
+  width: 420px;
   /* margin-left: 1050px;
   margin-top: 0px; */
   margin: 0px;
@@ -316,13 +319,14 @@ body, html {
 /* ----------------------------------------------------------------*/
 /* ----------------------- 金鎖記 Css Effect -------------------- */
 .金鎖記 {
-  width:180px;
+  width: 100%;
+  max-width:130px;
   /* margin-left: 740px;
   margin-top: 190px; */
   margin: 0px;
   padding: 0px;
-  top: 300px;
-  right: 770px;
+  top: 150px;
+  right: 450px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
   animation: JinSuoJiAnimate 5s linear 5s infinite alternate,
