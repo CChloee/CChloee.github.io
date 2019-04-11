@@ -11,6 +11,9 @@ context.lineWidth = 5;
 context.lineJoin = "round";
 context.lineCap = "round";
 
+// Define some variables to keep track of the touch position
+var touchX, touchY;
+
 //---------------Mouse drawing on canvas ---------------------------
 var drawing = false;
 
@@ -33,13 +36,8 @@ document.addEventListener('mousemove', function (event) {
 //----------------------------------------------------------------------------
 
 
-
-
 //--------------------------Touch event-----------------------
 //----------------------------test 02---------------------------
-// Define some variables to keep track of the touch position
-var touchX, touchY;
-
 function canvas_touchStart(){
   getTouchPos();
   drawDot(context, touchX, touchY, 12);
@@ -62,7 +60,7 @@ function getTouchPos(e){
   if(e.touches){
     if(e.touches.length == 1){  // Only deal with one finger
       var touch = e.touches[0];   // Get the information for finger #1
-      touchX=touch.pageX-touch.target.offsetLeft;
+      touchX= touch.pageX-touch.target.offsetLeft;
       touchY= touch.pageY-touch.target.offsetTop;
     }
   }
@@ -87,6 +85,7 @@ function init(){
 
 
 
+
 //----------------------------------------------------------------------
 //Color swatches
 document.querySelectorAll('nav a').forEach(link =>{
@@ -94,6 +93,7 @@ document.querySelectorAll('nav a').forEach(link =>{
     context.strokeStyle = this.style.backgroundColor
   })
 })
+
 
 
 //----------------------------------------------------------------------
@@ -106,6 +106,7 @@ function clearCanvas(){
 }
 
 
+
 //----------------------------------------------------------------------
 //Bursh Size Slider
 $("#brushSize").on('input', function(e){
@@ -116,6 +117,7 @@ $("#brushSize").on('input', function(e){
 });
 
 
+
 //----------------------------------------------------------------------
 //Erase
 function erase(){
@@ -124,6 +126,7 @@ function erase(){
   context.fillStyle = "rgba(255, 0, 0, 0)";
   context.lineWidth = 5;
 }
+
 
 
 //----------------------------------------------------------------------
