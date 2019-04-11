@@ -36,8 +36,11 @@ document.addEventListener('mousemove', function (event) {
 //----------------------------------------------------------------------------
 
 
-//--------------------------Touch event-----------------------
-//----------------------------test 02---------------------------
+
+
+
+//------------Finger drawing on canvas (touchEvent)-----------------------
+//-----------------------這邊call不出來---------------------------
 function canvas_touchStart(){
   getTouchPos();
   drawDot(context, touchX, touchY, 12);
