@@ -1,0 +1,77 @@
+body {
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100vh;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+.swiper-slide:nth-child(1) {
+  background-image: url('地圖頁面文本-02.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide:nth-child(2) {
+  background-image: url('地圖頁面文本-03.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide:nth-child(3) {
+  background-image: url('地圖頁面文本-04.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide:nth-child(4) {
+  background-image: url('地圖頁面文本-05.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide:nth-child(5) {
+  background-image: url('地圖頁面文本-06.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide:nth-child(6) {
+  background-image: url('地圖頁面文本-07.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide:nth-child(7) {
+  background-image: url('地圖頁面文本-08.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide:nth-child(8) {
+  background-image: url('地圖頁面文本-09.jpg');
+  background-size: cover;
+  background-position: center;
+}
