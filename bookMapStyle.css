@@ -1,6 +1,7 @@
 body, html {
   height: 100%;
   width: 100%;
+  overflow:hidden;
   /* background-size: cover;
   background-attachment: fixed; */
 }
@@ -24,8 +25,8 @@ body, html {
   height: auto;
   /* margin-left: 290px;
   margin-top: 110px; */
-  top: 80px;
-  left: 300px;
+  top: 70px;
+  left: 270px;
   margin: 0px;
   padding: 0px;
   position: fixed;
@@ -60,7 +61,7 @@ body, html {
 /* -----------------------花瓶 Css Effect------------------------- */
 .huaPing {
   width: 100%;
-  max-width: 250px;
+  max-width: 220px;
   height: auto;
   /* margin-left: 355px;
   margin-top: 390px; */
@@ -103,14 +104,14 @@ body, html {
 /* ----------------------- 茉莉香片 Css Effect --------------------- */
 .茉莉香片 {
   width: 100%;
-  max-width: 670px;
+  max-width: 610px;
   height: auto;
   /* margin-left: 9px;
   margin-top: 130px; */
   margin: 0px;
   padding: 0px;
   bottom: -50px;
-  right: -130px;
+  right: -120px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
   animation: MoLiAnimate 5s linear 8s infinite alternate,
@@ -148,13 +149,13 @@ body, html {
 .心經 {
   width: 100%;
   height: auto;
-  max-width: 290px;
+  max-width: 250px;
   /* margin-left: 510px;
   margin-top: -8px; */
   margin: 0px;
   padding: 0px;
-  top: 0px;
-  left: 530px;
+  top: -10px;
+  left: 490px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
   animation: XinJingAnimate 5s linear 20s infinite alternate,
@@ -193,13 +194,13 @@ body, html {
 .封鎖 {
   width: 100%;
   height: auto;
-  max-width: 450px;
+  max-width: 350px;
   /* margin-left: 510px;
   margin-top: 380px; */
   margin: 0px;
   padding: 0px;
   bottom: 10px;
-  left: 550px;
+  left: 540px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
   animation: FengSuoAnimate 5s linear 10s infinite alternate,
@@ -236,13 +237,13 @@ body, html {
 /* ----------------------------------------------------------------*/
 /* ----------------------- 大鐘二胡 Css Effect -------------------- */
 .大鐘二胡 {
-  max-width: 460px;
+  max-width: 450px;
   /* margin-left: 0px;
   margin-top: 110px; */
   margin: 0px;
   padding: 0px;
-  top: 60px;
-  left: 1px;
+  top: 40px;
+  left: 0px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
   animation: DaZhongAnimate 5s linear 12s infinite alternate,
@@ -321,13 +322,13 @@ body, html {
 /* ----------------------- 金鎖記 Css Effect -------------------- */
 .金鎖記 {
   width: 100%;
-  max-width:170px;
+  max-width:150px;
   /* margin-left: 740px;
   margin-top: 190px; */
   margin: 0px;
   padding: 0px;
-  top: 150px;
-  right: 550px;
+  top: 190px;
+  right: 490px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
   animation: JinSuoJiAnimate 5s linear 5s infinite alternate,

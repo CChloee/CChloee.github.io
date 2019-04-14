@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Book Content Full Screen Slider</title>
+    <title>傾城之戀 Book Content</title>
     <meta name='viewport' content='width=device-width', initial-scale=1>
     <link rel='stylesheet' type='text/css' href='swiper.min.css'>
     <link rel='stylesheet' type='text/css' href='bookContent.css'>
@@ -16,13 +16,15 @@
       <div class="swiper-slide">
         <!-- Back Button -->
         <!-- 回到上一頁按鈕有bug -->
-        <div>
-          <form method='get' action='index.html'>
-            <button class='back round' type='submit'><span><b> &#8249; </b></span></button>
-          </form>
+        <div class="back_btn">
+          <div>
+            <form method='get' action="index.html">
+              <button class='back round'>&#8249;</button>
+            </form>
+          </div>
         </div>
         <!-- Add Next Button -->
-        <div class="type-1">
+        <div class="next_btn">
           <div>
             <form method='get' action="painter.html">
               <button class='btn'>Continue</button>
@@ -41,7 +43,7 @@
           </form>
         </div>
         <!-- Add Next Button -->
-        <div class="type-1">
+        <div class="next_btn">
           <div>
             <form method='get' action="painter.html">
               <button class='btn'><span>Continue</spam></button>
@@ -60,7 +62,7 @@
           </form>
         </div>
         <!-- Add Next Button -->
-        <div class="type-1">
+        <div class="next_btn">
           <div>
             <form method='get' action="painter.html">
               <button class='btn'><span>CONTINUE</spam></button>
@@ -79,7 +81,7 @@
           </form>
         </div>
         <!-- Add Next Button -->
-        <div class="type-1">
+        <div class="next_btn">
           <div>
             <form method='get' action="painter.html">
               <button class='btn'><span>Continue</spam></button>
@@ -98,7 +100,7 @@
           </form>
         </div>
         <!-- Add Next Button -->
-        <div class="type-1">
+        <div class="next_btn">
           <div>
             <form method='get' action="painter.html">
               <button class='btn'><span>Continue</spam></button>
@@ -117,7 +119,7 @@
           </form>
         </div>
         <!-- Add Next Button -->
-        <div class="type-1">
+        <div class="next_btn">
           <div>
             <form method='get' action="painter.html">
               <button class='btn'><span>Continue</spam></button>
@@ -136,7 +138,7 @@
           </form>
         </div>
         <!-- Add Next Button -->
-        <div class="type-1">
+        <div class="next_btn">
           <div>
             <form method='get' action="painter.html">
               <button class='btn'><span>Continue</spam></button>
@@ -155,7 +157,7 @@
           </form>
         </div>
         <!-- Add Next Button -->
-        <div class="type-1">
+        <div class="next_btn">
           <div>
             <form method='get' action="painter.html">
               <button class='btn'><span>Continue</spam></button>
@@ -172,6 +174,7 @@
    <div class="swiper-button-next"><span></spam></div>
    <div class="swiper-button-prev"><span></spam></div>
   </div>
+  </div>
 
 
 
@@ -180,10 +183,12 @@
 
     <!-- - - - - - - - - -SCRIPT- - - - - - - - - -->
     <!-- Swiper JS -->
-    <script type='text/javascript' src='swiper.min.js'></script>
+    <script type='text/javascript' src='./js/swiper.min.js'></script>
 
     <!-- Initialize Swiper -->
-    <script>
+    <script type='text/javascript'>
+
+    // Swiper functions
      var mySwiper = new Swiper('.swiper-container', {
        // effect: '',
        // loop: false,
@@ -200,7 +205,6 @@
        },
      });
    </script>
-   <!-- - - - - - - - - -SCRIPT- - - - - - - - - -->
 
   </body>
 </html>
