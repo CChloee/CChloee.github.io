@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>傾城之戀 Comment Gallery</title>
-    <meta name='viewport' content='width=device-width', initial-scale=1>
+    <meta name='viewport' content='width=device-width' , initial-scale=1>
     <link rel='stylesheet' type='text/css' href='swiper.min.css'>
     <link rel='stylesheet' type='text/css' href='commentGallery.css'>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  </head>
-  <body>
-  <div class='bgimg w3-display-container w3-animate-opacity'>
+</head>
 
-    <!-- Swiper -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"></div>
-      <div class="swiper-slide"></div>
-      <div class="swiper-slide"></div>
-      <div class="swiper-slide"></div>
-      <div class="swiper-slide"></div>
-      <div class="swiper-slide"></div>
-      <div class="swiper-slide"></div>
-      <div class="swiper-slide"></div>
-      <div class="swiper-slide"></div>
-      <div class="swiper-slide"></div>
+<body>
+    <div class='bgimg w3-display-container w3-animate-opacity'>
+
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+            </div>
+
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- Back button -->
+        <div class='back_btn'>
+            <form method='get' action='index.html'>
+                <button class='back'>Back To Homepage</button>
+            </form>
+        </div>
     </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-  </div>
-
-  <!-- Back button -->
-  <div class='back_btn'>
-    <form method='get' action='index.html'>
-      <button class='back'>Back To Homepage</button>
-    </form>
-  </div>
-</div>
-
 
     <!-- Swiper JS -->
     <script type='text/javascript' src='./js/swiper.min.js'></script>
     <!-- Initialize Swiper -->
     <script type='text/javascript'>
-     var comment_swiper = new Swiper('.swiper-container', {
-       slidesPerView: 3,
-       slidesPerColumn: 2,
-       spaceBetween: 30,
-       pagination: {
-         el: '.swiper-pagination',
-         clickable: true,
-       },
-     });
-   </script>
-  </body>
+        var comment_swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            slidesPerColumn: 2,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+
 </html>
