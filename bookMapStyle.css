@@ -21,7 +21,7 @@ body, html {
 /* -----------------------香爐 Css Effect ----------------------- */
 .xiangLu {
   width: 100%;
-  max-width: 280px;
+  max-width: 260px;
   height: auto;
   /* margin-left: 290px;
   margin-top: 110px; */
@@ -67,7 +67,7 @@ body, html {
   margin-top: 390px; */
   margin: 0px;
   padding: 0px;
-  bottom: 150px;
+  bottom: 120px;
   left: 380px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
@@ -104,14 +104,14 @@ body, html {
 /* ----------------------- 茉莉香片 Css Effect --------------------- */
 .茉莉香片 {
   width: 100%;
-  max-width: 610px;
+  max-width: 560px;
   height: auto;
   /* margin-left: 9px;
   margin-top: 130px; */
   margin: 0px;
   padding: 0px;
   bottom: -50px;
-  right: -120px;
+  right: -100px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
   animation: MoLiAnimate 5s linear 8s infinite alternate,
@@ -149,7 +149,7 @@ body, html {
 .心經 {
   width: 100%;
   height: auto;
-  max-width: 250px;
+  max-width: 230px;
   /* margin-left: 510px;
   margin-top: -8px; */
   margin: 0px;
@@ -199,8 +199,8 @@ body, html {
   margin-top: 380px; */
   margin: 0px;
   padding: 0px;
-  bottom: 10px;
-  left: 540px;
+  bottom: -11px;
+  left: 530px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
   animation: FengSuoAnimate 5s linear 10s infinite alternate,
@@ -237,12 +237,12 @@ body, html {
 /* ----------------------------------------------------------------*/
 /* ----------------------- 大鐘二胡 Css Effect -------------------- */
 .大鐘二胡 {
-  max-width: 450px;
+  max-width: 430px;
   /* margin-left: 0px;
   margin-top: 110px; */
   margin: 0px;
   padding: 0px;
-  top: 40px;
+  top: 30px;
   left: 0px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
@@ -279,7 +279,7 @@ body, html {
 /* ----------------------------------------------------------------*/
 /* ----------------------- 琉璃瓦 Css Effect -------------------- */
 .琉璃瓦 {
-  width: 470px;
+  width: 450px;
   /* margin-left: 1050px;
   margin-top: 0px; */
   margin: 0px;
@@ -322,13 +322,13 @@ body, html {
 /* ----------------------- 金鎖記 Css Effect -------------------- */
 .金鎖記 {
   width: 100%;
-  max-width:150px;
+  max-width:135px;
   /* margin-left: 740px;
   margin-top: 190px; */
   margin: 0px;
   padding: 0px;
-  top: 190px;
-  right: 490px;
+  top: 220px;
+  right: 460px;
   position: fixed;
   filter: drop-shadow(0 0 15px #000000);
   animation: JinSuoJiAnimate 5s linear 5s infinite alternate,
