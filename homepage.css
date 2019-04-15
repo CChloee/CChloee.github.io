@@ -24,12 +24,12 @@ body, html {
   max-width: 290px;
   height: auto;
   top: 170px;
-  left: 200px;
+  right: 230px;
   padding: 0px;
   position: fixed;
 }
 
-.book_02 {
+/* .book_02 {
   width: 100%;
   max-width: 290px;
   position: fixed;
@@ -37,4 +37,4 @@ body, html {
   top: 170px;
   right: 200px;
   padding: 0px;
-}
+} */
