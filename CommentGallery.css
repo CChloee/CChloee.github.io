@@ -6,20 +6,20 @@ body, html {
   background-attachment: fixed; */
 }
 
-.bgimg {
-  background-image: url(empty_bg.jpg);
-  min-height: 100%;
-  background-position: center ;
-  background-size: cover;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   background: #000000;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color:#000;
+  margin: 0;
+  padding: 0;
+}
+
+.bgimg {
+  background-image: url('empty_bg.jpg');
+  min-height: 100%;
+  background-position: center ;
+  background-size: cover;
   margin: 0;
   padding: 0;
 }
@@ -98,10 +98,10 @@ body {
    top: 120px;
    left: 520px;
    border: solid 1px white;
-  border-radius: 80px;
-  padding: 15px 30px;
-    min-width: 100px;
-    width: fit-content;
+   border-radius: 80px;
+   padding: 15px 30px;
+   min-width: 100px;
+   width: fit-content;
    font-size: 14px;
    letter-spacing: 2px;
    color: white;
