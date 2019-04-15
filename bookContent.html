@@ -71,7 +71,7 @@
         </div>
       </div>
 
-      <!-- 封鎖 -->
+      <!-- 心經 -->
       <div class="swiper-slide">
         <!-- Back Button -->
         <!-- 回到上一頁按鈕有bug -->
@@ -90,7 +90,7 @@
         </div>
       </div>
 
-      <!-- 心經 -->
+      <!-- 封鎖 -->
       <div class="swiper-slide">
         <!-- Back Button -->
         <!-- 回到上一頁按鈕有bug -->
@@ -204,6 +204,14 @@
          clickable: 'true'
        },
      });
+     // REVIEW: Get the index from url
+     var url = location.href;
+     var ary1 = url.split('?');
+     var ary2 = ary1[1].split('&');
+     var ary3 = ary2[0].split('=');
+     var index = ary3[1];
+     console.log(index);
+     swiper.slideTo(index-1);
    </script>
 
   </body>
