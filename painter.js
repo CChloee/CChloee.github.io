@@ -156,5 +156,5 @@ function submitDrawing (){
 //----------------------------------------------------------------------
 //Back to previous page
 function backTo_id() {
-  window.location.href = 'index.html';
+  window.location.href = 'bookMap.html';
 }
