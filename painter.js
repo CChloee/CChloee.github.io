@@ -149,7 +149,7 @@ function erase(){
 //----------------------------------------------------------------------
 //Submit Drawing
 function submitDrawing (){
-  window.location.href = 'commetGallery.html';
+  window.location.href = 'commentGallery.html';
 }
 
 
