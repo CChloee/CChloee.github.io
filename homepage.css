@@ -1,0 +1,40 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow:hidden;
+  /* background-size: cover;
+  background-attachment: fixed; */
+}
+
+.bgimg {
+  background-image: url('fmhomepage-01.jpg');
+  min-height: 100%;
+  background-position: center ;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.bookCover{
+  display: inline-block;
+}
+
+.book_01 {
+  width: 100%;
+  max-width: 290px;
+  height: auto;
+  top: 170px;
+  left: 200px;
+  padding: 0px;
+  position: fixed;
+}
+
+.book_02 {
+  width: 100%;
+  max-width: 290px;
+  position: fixed;
+  height: auto;
+  top: 170px;
+  right: 200px;
+  padding: 0px;
+}
