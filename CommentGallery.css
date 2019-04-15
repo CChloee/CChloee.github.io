@@ -16,127 +16,129 @@ body, html {
 }
 
 body {
-      background: #000000;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color:#000;
-      margin: 0;
-      padding: 0;
-    }
-    .swiper-container {
-      top:120px;
-      width: 90%;
-      height: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      transition: opacity .6s ease;
-    }
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #B0B0B0;
-      height: 220px;
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-      border-radius: 2%;
-    }
+  background: #000000;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color:#000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-container {
+  top:120px;
+  width: 90%;
+  height: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: opacity .6s ease;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #B0B0B0;
+  height: 220px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  border-radius: 2%;
+}
 
     /* Slides */
-    .swiper-slide:nth-child(1) {
-      background-image: url('comment_01.jpg');
-      background-size: cover;
-      background-position: center;
-    }
+.swiper-slide:nth-child(1) {
+  background-image: url('comment_01.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
-    .swiper-slide:nth-child(2) {
-      background-image: url('comment_02.jpg');
-      background-size: cover;
-      background-position: center;
-    }
+.swiper-slide:nth-child(2) {
+  background-image: url('comment_02.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
-    .swiper-slide:nth-child(3) {
-      background-image: url('comment_03.jpg');
-      background-size: cover;
-      background-position: center;
-    }
+.swiper-slide:nth-child(3) {
+  background-image: url('comment_03.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
-    .swiper-slide:nth-child(4) {
-      background-image: url('comment_04.jpg');
-      background-size: cover;
-      background-position: center;
-    }
+.swiper-slide:nth-child(4) {
+  background-image: url('comment_04.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
-    .swiper-slide:nth-child(5) {
-      background-image: url('comment_05.jpg');
-      background-size: cover;
-      background-position: center;
-    }
+.swiper-slide:nth-child(5) {
+  background-image: url('comment_05.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
-    .swiper-slide:nth-child(6) {
-      background-image: url('comment_06.jpg');
-      background-size: cover;
-      background-position: center;
-    }
+.swiper-slide:nth-child(6) {
+  background-image: url('comment_06.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
-    /* back button */
-    .back {
-       font-family: 'IBM Plex Mono', monospace;
-       background-color: transparent;
-       top: 120px;
-       left: 520px;
-       border: solid 1px white;
-       border-radius: 80px;
-       padding: 15px 30px;
-       min-width: 100px;
-       width: fit-content;
-       font-size: 14px;
-       letter-spacing: 2px;
-       color: white;
-       position: relative;
-       transition: all 0.3s ease-in-out;
-       cursor: pointer;
-       margin-top: 20px;
-    }
+/* back button */
+.back {
+   font-family: 'IBM Plex Mono', monospace;
+   background-color: transparent;
+   top: 120px;
+   left: 520px;
+   border: solid 1px white;
+  border-radius: 80px;
+  padding: 15px 30px;
+    min-width: 100px;
+    width: fit-content;
+   font-size: 14px;
+   letter-spacing: 2px;
+   color: white;
+   position: relative;
+   transition: all 0.3s ease-in-out;
+   cursor: pointer;
+   margin-top: 20px;
+}
 
-    .back:after {
-       content: '';
-       background-color: rgba(255,255,255, 0.1);
-       width: 100%;
-       height: 100%;
-       display: block;
-       position: absolute;
-       z-index:2;
-       left: 0px;
-       top: 0px;
-       border-radius: inherit;
-       transition: all 0.3s ease-in-out;
-    }
+.back:after {
+   content: '';
+    background-color: rgba(255,255,255, 0.1);
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index:2;
+    left: 0px;
+    top: 0px;
+    border-radius: inherit;
+    transition: all 0.3s ease-in-out;
+}
 
+.back:hover::after {
+    left: 4px;
+    top: 5px;
+    background-color: rgba(255,255,255, 0.3);
+}
+
+.back:hover {
+    font-weight: 800;
+}
+
+@media screen and (max-width: 768px) {
     .back:hover::after {
-       left: 4px;
-       top: 5px;
-       background-color: rgba(255,255,255, 0.3);
+      left: 0px;
+      top: 0px;
+      background-color: rgba(255,255,255, 0.1);
     }
-
-    .back:hover {
-       font-weight: 800;
-    }
-
-    @media screen and (max-width: 768px) {
-       .back:hover::after {
-          left: 0px;
-          top: 0px;
-          background-color: rgba(255,255,255, 0.1);
-       }
-    }
+}
