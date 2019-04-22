@@ -4,7 +4,7 @@
   padding: 20px;
   position: fixed;
   bottom: 0;
-  background-color: #3B6C6C;
+  background-color: #000000;
   color: #CBA44B;
 }
 
@@ -190,6 +190,7 @@ nav *{
 }
 
 
+
 /**********************/
 /* Back to previous Button */
 /* back to previous page button */
@@ -234,4 +235,32 @@ nav *{
 .backTo:hover {
   background-color: rgba(255,255,255, 0.3);
   transition: all 0.4s ease 0s;
+}
+
+
+
+
+/**********************/
+/* 新增 */
+/* Sticker Tool Bar */
+#stickerToolBar {
+  position: absolute;
+  bottom: 90px;
+  width: 100%;
+  height: 100px;
+  margin-top: 20px;
+  background-color: lightblue;
+}
+
+.stickerButton {
+  position: fixed;
+  left: 650px;
+  bottom: 25px;
+}
+
+#border {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 100px;
 }

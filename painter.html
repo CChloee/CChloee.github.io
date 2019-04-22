@@ -4,12 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" link>
     <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
     <title> Finger Muse - Painter </title>
   </head>
   <body>
-    <div>
+    <div class='container'>
       <canvas id='canvas'>Finger Muse Drawing Canvas</canvas>
 
       <!-- Back to previous page -->
@@ -19,6 +20,13 @@
       <div><button class='submitDraw' type="button" id='submitDrawing' href='javascript:void(0)' onClick="submitDrawing()">Submit</button></div>
 
       <div id='toolbar'>
+        <!-- Sticker Toolbar -->
+        <div>
+        <button class='stickerButton' type='button' onclick='stickerToolBar()'> Sticker </button>
+          <div id='stickerToolBar'>
+                <img draggable="true" id='border' src='golden-border-png-1.png' alt='border' />
+          </div>
+        </div>
         <!-- Clear Canvas -->
         <div><button class='clearCanvas' type="button" id='clearCanvas' href='javascript:void(0)' onClick="clearCanvas()">Clear</button></div>
         <!-- Brush Slider -->

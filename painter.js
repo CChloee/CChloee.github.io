@@ -41,7 +41,7 @@ function canvas_mouseMove(){
 
 
 //------------Finger drawing on canvas (touchEvent)-----------------------
-//-----------------------這邊call不出來---------------------------
+
 function canvas_touchStart(){
   drawing = true;
   getTouchPos();
@@ -157,4 +157,17 @@ function submitDrawing (){
 //Back to previous page
 function backTo_id() {
   window.location.href = 'bookMap.html';
+}
+
+
+//----------------------------------------------------------------------
+//新增
+//Sticker Tool Bar
+function stickerToolBar(){
+  var x = document.getElementById('stickerToolBar');
+  if (x.style.display === 'none'){
+    x.style.display = 'block';
+  }else{
+    x.style.display = 'none';
+  }
 }
