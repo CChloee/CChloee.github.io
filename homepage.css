@@ -6,6 +6,20 @@ body, html {
   background-attachment: fixed; */
 }
 
+#goFS{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0,0,0,0.7);
+  border: none;
+}
+
+#goFS:hover {
+  background-color: RoyalBlue;
+}
+
 .bgimg {
   background-image: url('fmhomepage-01.jpg');
   min-height: 100%;

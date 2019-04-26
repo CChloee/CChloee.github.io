@@ -11,6 +11,7 @@
 
   <body>
     <div class='bgimg w3-display-container w3-animate-left'>
+      <button id='goFS'><image src='expand.png' height='35px;'></button>
       <!-- 傾城之戀 -->
       <div class='bookCover'>
         <form method='get' action="bookMap.html">
@@ -21,9 +22,13 @@
           <input type='image' src='bookcover-02.png' class='book_02' alt="Submit">
         </form> -->
       </div>
-
-
-
     </div>
+
+    <script>
+      var goFS = document.getElementById('goFS');
+      goFS.addEventListener('click', function(){
+        document.body.requestFullscreen();
+      },false);
+    </script>
   </body>
 </html>
