@@ -6,10 +6,6 @@ canvas.height = window.innerHeight;
 
 var context = canvas.getContext('2d');
 
-context.strokeStyle = '#ff4141';
-context.lineWidth = 5;
-context.lineJoin = "round";
-context.lineCap = "round";
 // REVIEW: I call init() here
 init()
 // Define some variables to keep track of the touch position
@@ -93,6 +89,11 @@ function init(){
     canvas.addEventListener('touchstart', canvas_touchStart, false);
     canvas.addEventListener('touchend', canvas_touchEnd, false);
     canvas.addEventListener('touchmove', canvas_touchMove, false);
+    // Brush setting
+    context.strokeStyle = '#ff4141';
+    context.lineWidth = 5;
+    context.lineJoin = "round";
+    context.lineCap = "round";
   }
 }
 //---------------Finger drawing on canvas (touchEvent)------------------
@@ -107,6 +108,11 @@ function init(){
 document.querySelectorAll('nav a').forEach(link =>{
   link.addEventListener('click', function(event){
     context.strokeStyle = this.style.backgroundColor
+    	
+    context.globalCompositeOperation = "source-over";
+    context.lineWidth = 5;
+    context.lineJoin = "round";
+    context.lineCap = "round";
   })
 })
 
@@ -115,7 +121,6 @@ document.querySelectorAll('nav a').forEach(link =>{
 //----------------------------------------------------------------------
 //Clear Canvas Effect
 function clearCanvas(){
-  console.log('clear')
   clickX = new Array ();
   clickY = new Array();
   clickDrag = new Array ();
@@ -171,3 +176,23 @@ function stickerToolBar(){
     x.style.display = 'none';
   }
 }
+// var imageWidth, imageHeight;
+// // Handle mouse operation on canvas
+// function drag(e){
+//   e.dataTransfer.setData("Text",e.target.id);
+// }
+// function allowDrop(e){
+//   e.preventDefault();
+// }
+// function drop(e){
+//   e.preventDefault();
+//   var img = new Image();
+//   img.onload=function(){
+//     imageWidth = img.width * 0.1;
+//     imageHeight = img.height * 0.1;
+//     context.drawImage(img, e.clientX, e.clientY, imageWidth, imageHeight);
+//   }
+//   img.src = "golden-border-png-1.png"
+//   var data=e.dataTransfer.getData("Text");
+//   // var img = document.getElementById(data)
+// }

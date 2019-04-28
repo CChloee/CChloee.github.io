@@ -8,10 +8,12 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" link>
     <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
     <title> Finger Muse - Painter </title>
+    <!-- block right click -->
+    <script> document.addEventListener('contextmenu', event => event.preventDefault()); </script>
   </head>
   <body>
     <div class='container'>
-      <canvas id='canvas'>Finger Muse Drawing Canvas</canvas>
+      <canvas id='canvas' ondrop="drop(event)" ondragover="allowDrop(event)">Finger Muse Drawing Canvas</canvas>
 
       <!-- Back to previous page -->
       <div><button class='backTo' type="button" id='backTo_id' href='javascript:void(0)' onClick="backTo_id()">&#8249;</button></div>
@@ -24,7 +26,7 @@
         <div>
         <button class='stickerButton' type='button' onclick='stickerToolBar()'> Sticker </button>
           <div id='stickerToolBar'>
-                <img draggable="true" id='border' src='golden-border-png-1.png' alt='border' />
+                <img id='border' src='golden-border-png-1.png' alt='border' draggable="true" ondragstart="drag(event)" />
           </div>
         </div>
         <!-- Clear Canvas -->
