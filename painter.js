@@ -14,7 +14,7 @@ var stage = new Konva.Stage({
 var isPaint = false;
 var lastPointerPosition;
 var mode = 'brush';
-
+var stickerOk = false;
 //----------------------------------------------------------------------
 // Setting everything
 var stickerLayer;
@@ -93,6 +93,7 @@ function canvasSetting(){
 
 // Setup sticker layer and canvas layer
 function init(){
+  stickerOk = false;
   stickerLayer = new Konva.Layer();
   stage.add(stickerLayer);
   isPaint = false;
@@ -148,6 +149,16 @@ sticker.addEventListener('touchend', function(e){
 }, false);
 //----------------------------------------------------------------------
 // Sticker function
+
+function stickerDone(){
+  stickerOk = !stickerOk;
+  if(stickerOk){
+    stickerLayer.moveToBottom();
+  }
+  else{
+    drawLayer.moveToBottom();
+  }
+}
 
 function update(activeAnchor) {
   var group = activeAnchor.getParent();
