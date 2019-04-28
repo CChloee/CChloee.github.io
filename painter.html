@@ -7,50 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" link>
     <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
+    <script src="https://unpkg.com/konva@3.2.4/konva.min.js"></script>
     <title> Finger Muse - Painter </title>
     <!-- block right click -->
-    <script> document.addEventListener('contextmenu', event => event.preventDefault()); </script>
+    <!-- <script> document.addEventListener('contextmenu', event => event.preventDefault()); </script> -->
   </head>
   <body>
-    <div class='container'>
-      <canvas id='canvas' ondrop="drop(event)" ondragover="allowDrop(event)">Finger Muse Drawing Canvas</canvas>
+    <div id='container'>
+      <canvas id='canvas'>Finger Muse Drawing Canvas</canvas>
 
       <!-- Back to previous page -->
       <div><button class='backTo' type="button" id='backTo_id' href='javascript:void(0)' onClick="backTo_id()">&#8249;</button></div>
 
       <!-- Submit Drawing -->
       <div><button class='submitDraw' type="button" id='submitDrawing' href='javascript:void(0)' onClick="submitDrawing()">Submit</button></div>
-
-      <div id='toolbar'>
-        <!-- Sticker Toolbar -->
-        <div>
-        <button class='stickerButton' type='button' onclick='stickerToolBar()'> Sticker </button>
-          <div id='stickerToolBar'>
-                <img id='border' src='golden-border-png-1.png' alt='border' draggable="true" ondragstart="drag(event)" />
-          </div>
+    </div>
+    <div id='toolbar'>
+      <!-- Sticker Toolbar -->
+      <button class='stickerButton' type='button' onclick='stickerToolBar()'> Sticker </button>
+        <div id='stickerToolBar'>
+              <img id='border' src='border.png' alt='border' draggable="true" ondragstart="drag(event)" />
         </div>
-        <!-- Clear Canvas -->
-        <div><button class='clearCanvas' type="button" id='clearCanvas' href='javascript:void(0)' onClick="clearCanvas()">Clear</button></div>
-        <!-- Brush Slider -->
-        <div class='slidecontainer'><input type='range' data-slider-id='brushSlider' min='1' max='30' value='3' class='slider' id='brushSize'/></div>
-        <!-- Erase -->
-        <input type='button' id='eraseTool' value='erase' class='erase' onClick='erase()'/>
-        <!-- Color Swatches -->
-        <div id= colors>
-          <nav>
-            <a href="#" style="background-color: #ff4141"></a>
-            <a href="#" style="background-color: #fef336"></a>
-            <a href="#" style="background-color: #2727e6"></a>
-            <a href="#" style="background-color: #13e26f"></a>
-            <a href="#" style="background-color: #ffffff"></a>
-          </nav>
-        </div>
-
+      <!-- Clear Canvas -->
+      <div><button class='clearCanvas' type="button" id='clearCanvas' href='javascript:void(0)' onClick="clearCanvas()">Clear</button></div>
+      <!-- Brush Slider -->
+      <div class='slidecontainer'><input type='range' data-slider-id='brushSlider' min='1' max='30' value='3' class='slider' id='brushSize'/></div>
+      <!-- Erase -->
+      <input type='button' id='eraseTool' value='erase' class='erase' onClick='erase()'/>
+      <!-- Color Swatches -->
+      <div id= colors>
+        <nav>
+          <a href="#" style="background-color: #ff4141"></a>
+          <a href="#" style="background-color: #fef336"></a>
+          <a href="#" style="background-color: #2727e6"></a>
+          <a href="#" style="background-color: #13e26f"></a>
+          <a href="#" style="background-color: #ffffff"></a>
+        </nav>
       </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="painter.js"></script>
-
 
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="painter.js"></script>
   </body>
 </html>

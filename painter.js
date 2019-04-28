@@ -1,113 +1,279 @@
 //set up the canvas
 var canvas = document.getElementById("canvas");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
 var context = canvas.getContext('2d');
+var width = window.innerWidth;
+var height = window.innerHeight;
+var stage = new Konva.Stage({
+  container: 'container',
+  width: width,
+  height: height
+});
 
-// REVIEW: I call init() here
-init()
-// Define some variables to keep track of the touch position
-var touchX, touchY;
+//----------------------------------------------------------------------
+// Variable
+var isPaint = false;
+var lastPointerPosition;
+var mode = 'brush';
 
-//---------------Mouse drawing on canvas ---------------------------
-var drawing = false;
-// REVIEW: Change these to function.
-function canvas_mouseDown(){
-  drawing = true;
-  context.moveTo(event.pageX, event.pageY);
-  context.beginPath();
-}
+//----------------------------------------------------------------------
+// Setting everything
+var stickerLayer;
+var drawLayer;
 
-function canvas_mouseUp(){
-  drawing = false;
-}
+init();
 
-function canvas_mouseMove(){
-  if (drawing){
-    context.lineTo(event.pageX, event.pageY);
-    context.stroke();
-  }
-}
-//----------------------------------------------------------------------------
+function canvasSetting(){
+  drawLayer = new Konva.Layer();
+  stage.add(drawLayer);
+  // This layer should be bottom so that you can select sticker.
+  drawLayer.moveToBottom();
 
+  canvas.width = stage.width();
+  canvas.height = stage.height();
 
+  // created canvas we can add to layer as "Konva.Image" element
+  var image = new Konva.Image({
+    image: canvas,
+    x: 0,
+    y: 0,
+    stroke: 'black',
+    shadowBlur: 5,
+  });
+  drawLayer.add(image);
+  drawLayer.draw();
 
+  // Get access to context element
+  context.strokeStyle = '#df4b26';
+  context.lineJoin = 'round';
+  context.lineWidth = 5;
 
+  // Event binding
+  image.on('mousedown touchstart', function() {
+    isPaint = true;
+    lastPointerPosition = stage.getPointerPosition();
+    // console.log(stage.getPointerPosition());
+  });
 
-//------------Finger drawing on canvas (touchEvent)-----------------------
+  stage.addEventListener('mouseup touchend', function() {
+    isPaint = false;
+  });
 
-function canvas_touchStart(){
-  drawing = true;
-  getTouchPos();
-  context.moveTo(touchX, touchY);
-  context.beginPath();
-  // Prevents an additional mousedown event being triggered
-  event.preventDefault();
-}
-
-function canvas_touchEnd(){
-  drawing = false;
-}
-
-function canvas_touchMove(e){
-  // Update the touch co-ordinates
-  getTouchPos(e);
-  if(drawing){
-    console.log(touchX, touchY);
-    context.lineTo(touchX, touchY);
-    context.stroke();
-  }
-  event.preventDefault();
-}
-
-function getTouchPos(e){
-  if(!e)
-    var e = event;
-
-  if(e.touches){
-    if(e.touches.length == 1){  // Only deal with one finger
-      var touch = e.touches[0];   // Get the information for finger #1
-      touchX= touch.pageX-touch.target.offsetLeft;
-      touchY= touch.pageY-touch.target.offsetTop;
+  // Drawing
+  stage.addEventListener('mousemove touchmove', function() {
+    if (!isPaint) {
+      return;
     }
-  }
+
+    if (mode === 'brush') {
+      context.globalCompositeOperation = 'source-over';
+    }
+    if (mode === 'eraser') {
+      context.globalCompositeOperation = 'destination-out';
+    }
+    context.beginPath();
+
+    var localPos = {
+      x: lastPointerPosition.x - image.x(),
+      y: lastPointerPosition.y - image.y()
+    };
+    context.moveTo(localPos.x, localPos.y);
+    var pos = stage.getPointerPosition();
+    localPos = {
+      x: pos.x - image.x(),
+      y: pos.y - image.y()
+    };
+    context.lineTo(localPos.x, localPos.y);
+    context.closePath();
+    context.stroke();
+
+    lastPointerPosition = pos;
+    drawLayer.batchDraw();
+  });
 }
 
-//Set up the canvas and add our event handlers aftre the page has loaded
-// REVIEW: This function wasn't called, so neither mouse nor touch event was binded to canvas.
-//         The reason why mouse event worked is that you used document.addEventListener for mouse event, therefore it worked //         and touch event didn't.
+// Setup sticker layer and canvas layer
 function init(){
-  if (context){
-    //React to mouse events on the canvas, and mouseup on the entire document
-    canvas.addEventListener('mousedown', canvas_mouseDown, false);
-    canvas.addEventListener('mousemove', canvas_mouseMove, false);
-    window.addEventListener('mouseup', canvas_mouseUp, false);
+  stickerLayer = new Konva.Layer();
+  stage.add(stickerLayer);
+  isPaint = false;
+  mode = 'brush';
+  canvasSetting();
+}
+//----------------------------------------------------------------------
+// Container event: Drag and drop sticker
+{
+  var con = stage.container();
 
-    //React to touch events on the canvas
-    canvas.addEventListener('touchstart', canvas_touchStart, false);
-    canvas.addEventListener('touchend', canvas_touchEnd, false);
-    canvas.addEventListener('touchmove', canvas_touchMove, false);
-    // Brush setting
-    context.strokeStyle = '#ff4141';
-    context.lineWidth = 5;
-    context.lineJoin = "round";
-    context.lineCap = "round";
+  function drag(e){
+    e.dataTransfer.setData("Text",e.target.id); 
+  }
+
+  con.addEventListener('dragover', function(e) {
+    e.preventDefault(); // !important
+  });
+
+  con.addEventListener('drop', function(e) {
+    e.preventDefault();
+    // now we need to find pointer position
+    // we can't use stage.getPointerPosition() here, because that event
+    // is not registered by Konva.Stage
+    // we can register it manually:
+    stage.setPointersPositions(e);
+    // sticker name
+    var name = e.dataTransfer.getData("Text");
+    var img = new Image();
+    img.onload=function(){
+      drawImage(this, stage.getPointerPosition().x, stage.getPointerPosition().y);
+    }
+    img.src = name + ".png";
+  });
+}
+
+//----------------------------------------------------------------------
+// Sticker Touch event
+var sticker = document.getElementById('border');
+sticker.addEventListener('touchstart', function(e){
+}, false);
+sticker.addEventListener('touchmove', function(e){
+}, false);
+sticker.addEventListener('touchend', function(e){
+  var x = e.changedTouches[0].clientX;
+  var y = e.changedTouches[0].clientY;
+  var img = new Image();
+  var name = e.target.id; 
+  img.onload=function(){
+    drawImage(this, x, y);
+  }
+  img.src = name + ".png";
+}, false);
+//----------------------------------------------------------------------
+// Sticker function
+
+function update(activeAnchor) {
+  var group = activeAnchor.getParent();
+
+  var topLeft = group.get('.topLeft')[0];
+  var topRight = group.get('.topRight')[0];
+  var bottomRight = group.get('.bottomRight')[0];
+  var bottomLeft = group.get('.bottomLeft')[0];
+  var image = group.get('Image')[0];
+
+  var anchorX = activeAnchor.getX();
+  var anchorY = activeAnchor.getY();
+
+  // update anchor positions
+  switch (activeAnchor.getName()) {
+    case 'topLeft':
+      topRight.y(anchorY);
+      bottomLeft.x(anchorX);
+      break;
+    case 'topRight':
+      topLeft.y(anchorY);
+      bottomRight.x(anchorX);
+      break;
+    case 'bottomRight':
+      bottomLeft.y(anchorY);
+      topRight.x(anchorX);
+      break;
+    case 'bottomLeft':
+      bottomRight.y(anchorY);
+      topLeft.x(anchorX);
+      break;
+  }
+
+  image.position(topLeft.position());
+
+  var width = topRight.getX() - topLeft.getX();
+  var height = bottomLeft.getY() - topLeft.getY();
+  if (width && height) {
+    image.width(width);
+    image.height(height);
   }
 }
-//---------------Finger drawing on canvas (touchEvent)------------------
+
+function addAnchor(group, x, y, name) {
+  var stage = group.getStage();
+  // var layer = group.getLayer();
+
+  var anchor = new Konva.Circle({
+    x: x,
+    y: y,
+    stroke: '#666',
+    fill: '#ddd',
+    strokeWidth: 2,
+    radius: 8,
+    name: name,
+    draggable: true,
+    dragOnTop: false
+  });
+
+  anchor.on('dragmove', function() {
+    update(this);
+    // layer.draw();
+  });
+  anchor.on('mousedown touchstart', function() {
+    group.draggable(false);
+    this.moveToTop();
+  });
+  anchor.on('dragend', function() {
+    group.draggable(true);
+    // layer.draw();
+  });
+  // add hover styling
+  anchor.on('mouseover', function() {
+    var layer = this.getLayer();
+    document.body.style.cursor = 'pointer';
+    this.strokeWidth(4);
+    layer.draw();
+  });
+  anchor.on('mouseout', function() {
+    var layer = this.getLayer();
+    document.body.style.cursor = 'default';
+    this.strokeWidth(2);
+    layer.draw();
+  });
+
+  group.add(anchor);
+}
+
+// When sticker drops on the canvas, it will be called.
+function drawImage(imageObj, x, y) {
+  var width = imageObj.width * 0.1, height = imageObj.height * 0.1;
+  var img = new Konva.Image({
+    image: imageObj,
+    width: width,
+    height: height,
+  });
+  // add cursor styling
+  img.on('mouseover', function() {
+    document.body.style.cursor = 'pointer';
+  });
+  img.on('mouseout', function() {
+    document.body.style.cursor = 'default';
+  });
+
+  var imgGroup = new Konva.Group({
+    x: x,
+    y: y,
+    draggable: true
+  });
+  imgGroup.add(img);
+  addAnchor(imgGroup, 0, 0, 'topLeft');
+  addAnchor(imgGroup, width, 0, 'topRight');
+  addAnchor(imgGroup, width, height, 'bottomRight');
+  addAnchor(imgGroup, 0, height, 'bottomLeft');
+  stickerLayer.add(imgGroup);
+  stickerLayer.draw();
+}
+
 //----------------------------------------------------------------------
+// Toolbox
 
-
-
-
-
-//----------------------------------------------------------------------
-//Color swatches
+// Brush color
 document.querySelectorAll('nav a').forEach(link =>{
   link.addEventListener('click', function(event){
-    context.strokeStyle = this.style.backgroundColor
+    mode = 'brush';
+    context.strokeStyle = this.style.backgroundColor;
     	
     context.globalCompositeOperation = "source-over";
     context.lineWidth = 5;
@@ -116,56 +282,35 @@ document.querySelectorAll('nav a').forEach(link =>{
   })
 })
 
-
-
-//----------------------------------------------------------------------
 //Clear Canvas Effect
 function clearCanvas(){
-  clickX = new Array ();
-  clickY = new Array();
-  clickDrag = new Array ();
-  context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+  stage.destroyChildren();
+  init();
 }
 
+// //Bursh Size Slider
+// $("#brushSize").on('input', function(e){
+//   var v = $(this).val();
+//   context.lineWidth = v;
+//   $('#val').html($(this).val());
+//   $('#val').width(v).height(v);
+// });
 
-
-//----------------------------------------------------------------------
-//Bursh Size Slider
-$("#brushSize").on('input', function(e){
-  var v = $(this).val();
-  context.lineWidth = v;
-  $('#val').html($(this).val());
-  $('#val').width(v).height(v);
-});
-
-
-
-//----------------------------------------------------------------------
-//Erase
+// Eraser
 function erase(){
-  context.globalCompositeOperation = "destination-out";
-  context.strokeStyle = "rgba(255, 255, 255)";
-  context.fillStyle = "rgba(255, 0, 0, 0)";
-  context.lineWidth = 5;
+  mode = 'eraser';
 }
 
-
-
-//----------------------------------------------------------------------
 //Submit Drawing
 function submitDrawing (){
   window.location.href = 'commentGallery.html';
 }
 
-
-//----------------------------------------------------------------------
 //Back to previous page
 function backTo_id() {
   window.location.href = 'bookMap.html';
 }
 
-
-//----------------------------------------------------------------------
 //新增
 //Sticker Tool Bar
 function stickerToolBar(){
@@ -176,23 +321,3 @@ function stickerToolBar(){
     x.style.display = 'none';
   }
 }
-// var imageWidth, imageHeight;
-// // Handle mouse operation on canvas
-// function drag(e){
-//   e.dataTransfer.setData("Text",e.target.id);
-// }
-// function allowDrop(e){
-//   e.preventDefault();
-// }
-// function drop(e){
-//   e.preventDefault();
-//   var img = new Image();
-//   img.onload=function(){
-//     imageWidth = img.width * 0.1;
-//     imageHeight = img.height * 0.1;
-//     context.drawImage(img, e.clientX, e.clientY, imageWidth, imageHeight);
-//   }
-//   img.src = "golden-border-png-1.png"
-//   var data=e.dataTransfer.getData("Text");
-//   // var img = document.getElementById(data)
-// }
