@@ -269,7 +269,7 @@ nav *{
 
 /**********************/
 /* Button for done stickering */
-.stickerDone {
+#stickerDone {
   position: absolute;
   top: 150px;
   background-color: transparent;
