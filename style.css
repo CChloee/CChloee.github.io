@@ -276,4 +276,16 @@ nav *{
   border: none;
   cursor: pointer;
   right: 50px;
+  display: inline-block;
+}
+
+#stickerDone:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  z-index:2;
+  left: 0px;
+  top: 0px;
 }
