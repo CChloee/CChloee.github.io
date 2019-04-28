@@ -105,7 +105,7 @@ function init(){
   var con = stage.container();
 
   function drag(e){
-    e.dataTransfer.setData("Text",e.target.id); 
+    e.dataTransfer.setData("Text",e.target.id);
   }
 
   con.addEventListener('dragover', function(e) {
@@ -140,7 +140,7 @@ sticker.addEventListener('touchend', function(e){
   var x = e.changedTouches[0].clientX;
   var y = e.changedTouches[0].clientY;
   var img = new Image();
-  var name = e.target.id; 
+  var name = e.target.id;
   img.onload=function(){
     drawImage(this, x, y);
   }
@@ -274,7 +274,7 @@ document.querySelectorAll('nav a').forEach(link =>{
   link.addEventListener('click', function(event){
     mode = 'brush';
     context.strokeStyle = this.style.backgroundColor;
-    	
+
     context.globalCompositeOperation = "source-over";
     context.lineWidth = 5;
     context.lineJoin = "round";
@@ -311,6 +311,8 @@ function backTo_id() {
   window.location.href = 'bookMap.html';
 }
 
+
+  
 //新增
 //Sticker Tool Bar
 function stickerToolBar(){

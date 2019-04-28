@@ -256,6 +256,7 @@ nav *{
   position: fixed;
   left: 650px;
   bottom: 25px;
+  cursor: pointer;
 }
 
 #border {
@@ -263,4 +264,16 @@ nav *{
   left: 10px;
   top: 10px;
   width: 100px;
+}
+
+
+/**********************/
+/* Button for done stickering */
+.stickerDone {
+  position: absolute;
+  top: 150px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  right: 50px;
 }
