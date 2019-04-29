@@ -16,7 +16,7 @@ body {
 }
 
 .bgimg {
-  background-image: url('empty_bg.jpg');
+  background-image: url('./img/empty_bg.jpg');
   min-height: 100%;
   background-position: center ;
   background-size: cover;
@@ -56,37 +56,37 @@ body {
 
     /* Slides */
 .swiper-slide:nth-child(1) {
-  background-image: url('comment_01.jpg');
+  background-image: url('./img/comment_01.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .swiper-slide:nth-child(2) {
-  background-image: url('comment_02.jpg');
+  background-image: url('./img/comment_02.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .swiper-slide:nth-child(3) {
-  background-image: url('comment_03.jpg');
+  background-image: url('./img/comment_03.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .swiper-slide:nth-child(4) {
-  background-image: url('comment_04.jpg');
+  background-image: url('./img/comment_04.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .swiper-slide:nth-child(5) {
-  background-image: url('comment_05.jpg');
+  background-image: url('./img/comment_05.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .swiper-slide:nth-child(6) {
-  background-image: url('comment_06.jpg');
+  background-image: url('./img/comment_06.jpg');
   background-size: cover;
   background-position: center;
 }

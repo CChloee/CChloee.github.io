@@ -7,7 +7,7 @@ body, html {
 }
 
 .bgimg {
-  background-image: url(bg_transparent.jpg);
+  background-image: url(./img/bg_transparent.jpg);
   filter: contrast(110%);
   min-height: 100%;
   background-position: center ;
