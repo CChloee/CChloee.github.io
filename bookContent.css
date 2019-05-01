@@ -159,7 +159,7 @@ body {
     /* swiper pagination */
 
     .swiper-pagination{
-      height: 50px;
+      height: 70px;
     }
 
     .swiper-pagination-bullet {
@@ -239,7 +239,7 @@ body {
 .btn {
    font-family: 'IBM Plex Mono', monospace;
    background-color: transparent;
-   top: 240px;
+   top: 270px;
    right: 0px;
    border: solid 1px white;
    border-radius: 80px;
